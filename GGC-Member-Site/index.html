@@ -10,15 +10,23 @@
     <title>Angular Application Testing</title>
 </head>
 <body>
-<div ng-app="app" ng-controller="MainController as main">
-    <label>Number 1:</label>
-    <input type="number" ng-model="main.num1" /> <br />
-    <label>Number 2:</label>
-    <input type="number" ng-model="main.num2" /> <br />
-    <hr>
-    <h1> {{main.num1}} + {{main.num2}} = {{main.num1 + main.num2}}</h1>
-</div>
+<div style="width: 800px" ng-app="app" ng-controller="MainController as main">
+    <h2>GGC Ranking List</h2>
+    <form>
+        <h3>Add New Member</h3>
+        Name: <input ="text" ng-model="newtask.name" />
+        User Name: <input ="text" ng-model="newtask.username" />
+        <input type="submit" ng-click="main.add(newtask)" value="Add Member" />
 
+    </form>
+        <div style="width: 700px" ng-repeat="task in main.tasks">
+            <div style="float:left; width: 150px"> {{task.name}}</div>
+        <div style="margin-left: 200px; background-color: lightseagreen; width: 250px">GGC {{task.username}}
+            <button style="float: inherit" ng-click="main.delete(task)">delete</button>
+        </div>
+
+        </div>
+</div>
 </body>
 </html>
 
