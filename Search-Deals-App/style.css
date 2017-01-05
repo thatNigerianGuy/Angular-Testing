@@ -73,13 +73,20 @@ th, td {
 
 #tbl-labels {
 
-    font-fam100ily: 'Rubik', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 30px;
     color: lightgray;
 }
 
 
-tr:hover {
+#tr-items:hover {
     background-color: #231f20;
     color: azure;
+}
+
+#small {
+    padding:20px;
+    font-family: Verdana;
+    font-size: 10px;
+    color: coral;
 }

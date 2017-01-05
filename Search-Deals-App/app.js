@@ -2,8 +2,8 @@
  * Created by monoandcompany on 1/3/17.
  */
 var myApp = angular.module('app', []);
-myApp.controller('MainController', function () {
-    this.deals = [
+myApp.controller('MainController', function ($scope) {
+    $scope.deals = [
         {
             product: " Xbox S 1 TB w/ Controller",
             price:  299,
@@ -61,10 +61,20 @@ myApp.controller('MainController', function () {
 
     ];
 
+    $scope.clickedPrice=false;
 
-    this.orderByMe = function(x) {
-        this.myOrderBy = x;
-    }
+    $scope.orderByMe = function(q) {
+        this.myOrderBy = q;
+
+        if ($scope.myOrderBy = 'price') {
+            this.clickedPrice = true;
+        } else {
+
+            $scope.clickedPrice =false;
+        }
+
+    };
+
 
     /*this.add = function(newtask) {
         console.log('Member '+ newtask.product + " and " + newtask.price + " has been added");
