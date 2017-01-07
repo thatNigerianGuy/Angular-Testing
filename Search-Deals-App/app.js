@@ -1,7 +1,7 @@
 /**
  * Created by monoandcompany on 1/3/17.
  */
-var myApp = angular.module('app', []);
+var myApp = angular.module('app', ['ngMaterial']);
 myApp.controller('MainController', function ($scope) {
     $scope.deals = [
         {
